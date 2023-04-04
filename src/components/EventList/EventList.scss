@@ -1,0 +1,20 @@
+@import 'styles/media-mixins.scss';
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  .event-card-ctr {
+    flex: 0 0 25%;
+    margin-bottom: 40px;
+    @include for-mobile() {
+      flex: 0 0 100%;
+      margin-bottom: 5px;
+    }
+    @include for-tablet() {
+      flex: 0 0 50%;
+    }
+    @include for-screen-size-range($smallscreen-min-width, $midscreen-max-width) {
+      flex: 0 0 33%;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+@mixin horizontalPadding() {
+  padding: 0 8vw;
+}
+
+.people-page {
+  .people {
+    padding: 105px 0px 240px 0px;
+    color: $darkGray;
+    .intro-section {
+      text-align: center;
+      color: $darkGray;
+      padding: 0 12vw;
+      .small-title {
+        font-family: $headerFontFamily;
+        padding-bottom: 20px;
+        font-weight: normal;
+      }
+      .header-text {
+        color: $bgBlue;
+        font-family: $headerFontFamily;
+        padding-bottom: 20px;
+        padding-left: 140px;
+        padding-right: 140px;
+      }
+      .desc {
+        @include contentFontSize();
+        padding: 0px 120px 100px 120px;
+        font-family: $contentFontFamily;
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    .people {
+      padding: 60px 0px 225px;
+      .intro-section {
+        padding: 0 0 50px 0;
+        .header-text {
+          padding: 0 35px 0px 35px;
+        }
+        .desc {
+          padding: 1rem 35px 50px 35px;
+        }
+      }
+    }
+  }
+  @include for-tablet() {
+    .people {
+      .intro-section {
+        padding: 0 60px;
+      }
+    }
+  }
+}

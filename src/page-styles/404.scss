@@ -1,0 +1,34 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.not-found-page {
+  font-family: $headerFontFamily;
+  height: 70vh;
+  .not-found-ctr {
+    color: $darkGray;
+    padding: 120px;
+  }
+  .back-button-anchor {
+    .back-button {
+      margin-top: 50px;
+    }
+  }
+}
+
+@include for-mobile() {
+  .not-found-page {
+    height: 60vh;
+    .not-found-ctr {
+      color: $darkGray;
+      padding: 50px;
+    }
+    .back-button-anchor {
+      .back-button {
+        margin-top: 50px;
+        font-size: 18px;
+      }
+    }
+  }
+}

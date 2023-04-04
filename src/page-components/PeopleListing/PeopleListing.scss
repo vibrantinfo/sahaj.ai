@@ -1,0 +1,123 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+.people-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 294px);
+  justify-content: center;
+  grid-gap: 10px;
+  margin: 0 auto;
+  .people-card {
+    position: relative;
+    width: 294px;
+    height: 294px;
+    .profile-img-ctr {
+      width: 100%;
+      height: 100%;
+      .profile-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .people-details {
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      background: rgba(0, 0, 0, 0.8);
+      transition: opacity 0.2s ease;
+      .name {
+        margin-top: auto;
+        padding: 20px 20px 20px 20px;
+        margin-right: auto;
+        text-align: left;
+        @include contentFontSize();
+        font-weight: 600;
+        font-family: "Playfair Display";
+      }
+      .social-handles {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        padding: 15px;
+        .social-profile-link {
+          margin-bottom: 4px;
+          &:hover {
+            .linked-in {
+              color: #0077b5 !important;
+            }
+            .twitter {
+              color: #1da1f2 !important;
+            }
+            .github {
+              color: #c9510c !important;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .people-details {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
+    }
+    &.with-title {
+      .people-details {
+        .name {
+          padding-bottom: 0;
+        }
+        .member-title {
+          padding: 5px 20px 20px 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        width: calc(100% - 294px);
+      }
+    }
+  }
+  @include for-mobile() {
+    padding: 0 35px;
+    grid-template-columns: 1fr 1fr;
+    .people-card {
+      width: 100%;
+      height: auto;
+      .people-details {
+        .name {
+          padding: 0px 10px 10px 10px;
+          font-size: 12px;
+        }
+        .social-handles {
+          padding-bottom: 0px;
+          padding-top: 5px;
+          padding-right: 8px;
+
+          .social-profile-link {
+            img {
+              height: 26px;
+              width: 26px;  
+            }
+          }
+        }
+      }
+      &.with-title {
+        .people-details {
+          .member-title {
+            padding: 0 10px 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  @include for-largerscreens() {
+    max-width: 1220px;
+  }
+}

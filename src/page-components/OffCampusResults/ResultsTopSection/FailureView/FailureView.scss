@@ -1,0 +1,59 @@
+@import "styles/media-mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.failure-view {
+  font-family: $headerFontFamily;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0px 60px 0px;
+  position: relative;
+
+  .cube-grid-yellow {
+    align-self: flex-start;
+  }
+  .three-stones {
+    align-self: flex-end;
+    width: 80px;
+    margin: 0 20px;
+  }
+  .one-stone {
+    width: 20px;
+    align-self: flex-end;
+    margin: 0 20px;
+    right: 20%;
+    position: relative;
+    padding-top: 80px;
+  }
+  .social-links {
+    padding: 40px 0;
+  }
+  .text-content {
+    &:first-of-type {
+      padding-bottom: 50px;
+    }
+    .sry-msg {
+      padding-top: 40px;
+      font-weight: bold;
+    }
+    .try-msg {
+      font-family: $contentFontFamily;
+    }
+  }
+  @include for-mobile-and-tablet() {
+    margin-bottom: 100px;
+    .three-stones {
+      position: absolute;
+      top: 100%;
+      right: 20px;
+    }
+    .text-content {
+      padding: 0 35px 0px 35px;
+      &:first-of-type {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import "styles/media-mixins.scss";
+
+$bgBlue: #33357D;
+$headingBlue: #33357D;
+$orange: #fe6149;
+$turqoise: #1ebfc9;
+$lightOrange: #ffa593;
+$lightBlue: #79B8CC;
+$red: #dd1b54;
+$lightNavy: #0f82b2;
+$yellow: #ffb102;
+$darkGray: #434343;
+$lightPurple: #715397;
+$darkYellow: #E0AA55;
+$lightRed: #D26F5D;
+$greenishBlue: #74B0C3;
+
+.white {
+  color: white;
+}
+
+.orange {
+  color: $orange;
+}
+
+.bgBlue {
+  color: $bgBlue;
+}
+
+.turqoise {
+  color: $turqoise;
+}
+
+.light-orange {
+  color: $lightOrange;
+}
+
+.light-blue {
+  color: $lightBlue;
+}
+
+.red {
+  color: $red;
+}
+
+.light-navy {
+  color: $lightNavy;
+}
+
+.yellow {
+  color: #ffb102;
+}
+
+.dark-yellow {
+  color: $darkYellow;
+}
+
+.light-red {
+  color: $lightRed;
+}
+
+.dark-gray {
+  color: $darkGray;
+}
+
+.light-purple {
+  color: $lightPurple;
+}
+
+.orange-hover {
+  &:hover {
+    color: $orange;
+    border-color: $orange;
+  }
+  @include for-mobile() {
+    color: $orange;
+    border-color: $orange;
+  }
+}
+
+.turqoise-hover {
+  &:hover {
+    color: $turqoise;
+    border-color: $turqoise;
+  }
+}
+
+.light-blue-hover {
+  &:hover {
+    color: $lightBlue;
+    border-color: $lightBlue;
+  }
+}
+
+.red-hover {
+  &:hover {
+    color: $red;
+    border-color: $red;
+  }
+  @include for-mobile() {
+    color: $red;
+    border-color: $red;
+  }
+}
+
+.light-navy-hover {
+  &:hover {
+    color: $lightNavy;
+    border-color: $lightNavy;
+  }
+  @include for-mobile() {
+    color: $lightNavy;
+    border-color: $lightNavy;
+  }
+}
+
+.light-purple-hover {
+  &:hover {
+    color: $lightPurple;
+  }
+}
+
+.light-red-hover {
+  &:hover {
+    color: $lightRed !important;
+  }
+}
+
+.bg-blue-background {
+  background-color: $bgBlue;
+}
+
+.light-navy-background {
+  background-color: $lightNavy;
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.light-purple-background {
+  background-color: $lightPurple;
+}
+
+.light-red-background {
+  background-color: $lightRed;
+}
+
+.light-blue-background {
+  background-color: $lightBlue;
+}
+
+.dark-yellow-background {
+  background-color: $darkYellow;
+}
+
+.greenish-blue-background {
+  background-color: $greenishBlue;
+}

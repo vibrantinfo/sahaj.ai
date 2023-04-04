@@ -1,0 +1,96 @@
+@import "styles/media-mixins.scss";
+@import "styles/utils.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.welcome-view {
+  text-align: center;
+
+  .top-image-ctr {
+    display: flex;
+    flex-direction: column;
+    .black-yellow-tiny-grid {
+      align-self: flex-start;
+      width: 70px;
+      margin-left: 10%;
+    }
+    .bg-cube-group {
+      display: none;
+    }
+  }
+
+  .middle-image-ctr {
+    display: flex;
+    flex-direction: column;
+    .one-stone {
+      align-self: flex-end;
+      width: 20px;
+      margin-right: 10%;
+    }
+  }
+
+  .welcome {
+    font-size: 0.7rem;
+    font-family: $headerFontFamily;
+  }
+  .main-heading {
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: $headerFontFamily;
+  }
+  .results-heading {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px $yellow;
+    font-family: $headerFontFamily;
+  }
+
+  .instruction {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-family: $contentFontFamily;
+  }
+
+  .input-buttons {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .phone-input {
+      margin-right: 20px;
+    }
+  }
+
+  @include for-mobile-and-tablet() {
+    padding-left: 35px;
+    padding-right: 35px;
+    .top-image-ctr {
+      display: flex;
+      flex-direction: column;
+      .black-yellow-tiny-grid {
+        display: none;
+      }
+      .bg-cube-group {
+        display: unset;
+        align-self: flex-end;
+        width: 50px;
+      }
+    }
+  
+    .middle-image-ctr {
+      .one-stone {
+        display: none;
+      }
+    }
+
+    .input-buttons {
+      display: block;
+
+      .phone-input {
+        margin-right: unset;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

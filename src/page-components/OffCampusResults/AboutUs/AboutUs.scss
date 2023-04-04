@@ -1,0 +1,138 @@
+@import "styles/media-mixins.scss";
+@import "styles/utils.scss";
+@import "styles/variables.scss";
+
+@mixin svgFullWidth() {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-us-ctr {
+  font-family: $headerFontFamily;
+  display: flex;
+  padding-bottom: 180px;
+  padding-top: 20px;
+
+  svg {
+    display: block;
+  }
+
+  .content-ctr {
+    padding: 0;
+
+    .top-cube-graphic {
+      margin-left: 120px;
+      padding-bottom: 60px;
+      width: 140px;
+      @include svgFullWidth();
+    }
+
+    .top-grid-graphic {
+      width: 400px;
+      @include svgFullWidth();
+    }
+
+    .content {
+      padding-left: 120px;
+      padding-top: 100px;
+      color: #151b3b;
+
+      .title {
+        font-size: clamp(28px, 3.2vw, 65px);
+        font-weight: 600;
+        line-height: 1.4em;
+      }
+      .description {
+        font-size: clamp(18px, 1.5vw, 26px);
+        font-weight: 300;
+        padding-top: 20px;
+        font-family: $contentFontFamily;
+      }
+      .actions {
+        padding-top: 50px;
+
+        .light-theme-button {
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .graphic-ctr {
+    padding: 0;
+    .side-graphics {
+      @include svgFullWidth();
+
+      .side-illustration {
+        margin: 0 auto;
+        top: 5vw;
+        width: 50%;
+      }
+
+      .side-cube-graphic {
+        width: 140px;
+        margin: 0px 250px;
+      }
+      .side-grid-graphic {
+        width: 450px;
+        margin: 180px auto 300px;
+      }
+    }
+  }
+
+  @include for-mobile-and-tablet() {
+    flex-direction: column-reverse;
+    padding-bottom: 0px;
+    .graphic-ctr {
+      .side-graphics {
+        .side-illustration {
+          margin: auto;
+          width: 40%;
+          min-width: 160px;
+        }
+      }
+    }
+
+    .content-ctr {
+      .content {
+        padding: 40px 25px 0px;
+        text-align: center;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @include for-tablet() {
+    .content-ctr {
+      .content {
+        padding: 80px 80px;
+      }
+    }
+  }
+}
+
+.mobile-bottom-graphics {
+  svg {
+    display: block;
+  }
+  @include svgFullWidth();
+  margin-bottom: 40px;
+  .bg-cube-group {
+    width: 60px;
+    margin-left: 44px;
+    margin-top: 20px;
+  }
+  .one-stone {
+    width: 20px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}

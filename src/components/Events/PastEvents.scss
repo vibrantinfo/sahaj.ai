@@ -1,0 +1,56 @@
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+
+.event-list-page {
+  .event-list-ctr {
+    color: $darkGray;
+    padding: 100px 85px 275px;
+    .top-section {
+      text-align: center;
+      .caption {
+        font-family: $headerFontFamily;
+        font-weight: normal;
+      }
+      .header-text {
+        color: $bgBlue;
+        font-family: $headerFontFamily;
+        margin-bottom: 50px;
+        margin-top: 20px;
+      }
+    }
+    .back-btn-ctr {
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+    }
+  }
+
+  @include for-mobile() {
+    .event-list-ctr {
+      padding: 60px 5px 275px;
+
+      .top-section {
+        text-align: left;
+        padding-left: 30px;
+
+        .header-text {
+          margin-top: 20px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .back-btn-ctr {
+        justify-content: left;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  @include for-smallscreen() {
+    .event-list-ctr {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "styles/media-mixins.scss";
+@import "styles/variables.scss";
+
+.upcoming-events {
+  .event-list {
+    justify-content: center;
+  }
+  .event-img-list {
+    padding-top: 80px;
+    .event-img-ctr {
+      display: block;
+      width: 72%;
+      max-width: 1200px;
+      position: relative;
+      margin: auto;
+      padding-bottom: 30px;
+      transition: transform 0.2s ease-out;
+      &:hover {
+        transform: scale(0.98);
+      }
+      .button-ctr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        padding: 10px;
+        button {
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          font-family: $contentFontFamily;
+        }
+      }
+      .event-img {
+        z-index: 10;
+      }
+    }
+  }
+
+  @include for-mobile() {
+    .event-img-list {
+      .event-img-ctr {
+        .button-ctr {
+          button {
+            font-size: 10pt;
+            padding: 6px 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @include for-mobile-and-tablet() {
+    .event-img-list {
+      .event-img-ctr {
+        width: 100%;
+      }
+    }
+  }
+}

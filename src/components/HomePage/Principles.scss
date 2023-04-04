@@ -1,0 +1,302 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+@import "styles/colors.scss";
+
+.principles {
+  color: #434343;
+  padding: 120px 105px;
+  overflow: hidden;
+  @include contentFontSize();
+
+  .button {
+    font-family: $contentFontFamily;
+    margin-top: 50px;
+    border: none;
+  }
+
+  .value-ctr {
+    padding: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .graphic-watermark {
+      position: absolute;
+      top: 0;
+      left: -120px;
+      height: 100%;
+      width: auto;
+    }
+    .value-text {
+      padding-bottom: 0.5rem;
+      color: $headingBlue;
+    }
+    p {
+      margin-top: 1rem;
+      font-family: $contentFontFamily;
+    }
+    .explanation {
+      margin: 0 auto;
+      padding-left: 50px;
+      .action-btn {
+        margin-top: 50px;
+      }
+      .light-blue-hover {
+        background-color: #E0AA55;
+        font-family: $contentFontFamily;
+      }
+    }
+    .value {
+      .graphic-img {
+        margin: 0 10% 0 20%;
+        max-width: 342px;
+        max-height: 445px;
+      }
+    }
+  }
+  .first-principles-thinking {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .graphic-watermark {
+      position: absolute;
+      top: 0;
+      right: -45%;
+      height: 100%;
+    }
+    @include for-superlargescreens() {
+      .graphic-watermark {
+        right: -70%;
+      }
+    }
+    .first-principles-value {
+      .value-text {
+        padding-bottom: 0.5rem;
+        color: $headingBlue;
+      }
+      p {
+        margin-top: 1rem;
+        font-family: $contentFontFamily;
+      }
+      .action-btn {
+        margin-top: 50px;
+      }
+      .turqoise-hover {
+        background-color: #79B8CC;
+        font-family: $contentFontFamily;
+      }
+    }
+    .graphic-ctr {
+      .graphic-img {
+        margin: 0 auto;
+        max-width: 342px;
+        max-height: 445px;
+      }
+    }
+  }
+  .problem-solving-ctr {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 120px 0 120px 0;
+    margin-bottom: 120px;
+    .graphic-watermark {
+      position: absolute;
+      top: -80px;
+      right: -120px;
+      height: 150%;
+    }
+    .problems-explanation {
+      .problems-text {
+        padding-bottom: 0.5rem;
+        color: $headingBlue;
+      }
+      .para:first-of-type {
+        margin-top: 1rem;
+      }
+      .para {
+        font-family: $contentFontFamily;
+      }
+      .action-btn {
+        margin-top: 50px;
+      }
+    }
+    .graphic-ctr {
+      .graphic-img {
+        margin: 0 auto;
+        max-width: 342px;
+        max-height: 445px;
+      }
+    }
+  }
+  h1 {
+    font-family: $headerFontFamily;
+  }
+
+  @include for-1kscreen() {
+    .value-ctr {
+      .graphic-watermark {
+        top: 0;
+        left: -120px;
+        height: 100%;
+        width: auto;
+      }
+    }
+    .first-principles-thinking {
+      .graphic-watermark {
+        top: 0;
+        right: -60%;
+        height: 100%;
+      }
+    }
+    .problem-solving-ctr {
+      .graphic-watermark {
+        top: -80px;
+        right: -120px;
+        height: 150%;
+      }
+    }
+  }
+
+  @include for-largescreen() {
+    .first-principles-thinking {
+      .graphic-watermark {
+        top: 0;
+        right: -90%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include for-smallscreen() {
+    .first-principles-thinking {
+      .graphic-watermark {
+        top: 0;
+        right: -140%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include for-mobile-and-tablet() {
+    text-align: center;
+    .button {
+      margin: 50px auto 0 auto;
+    }
+    .top-section {
+      padding: 20px;
+    }
+    .value-ctr {
+      padding: 80px 0 0 0;
+      .value {
+        padding: 20px 15px 50px 15px;
+        .value-text {
+          max-width: 265px;
+        }
+      }
+      .explanation {
+        padding-left: 15px;
+        padding-bottom: 40px;
+      }
+      .value {
+        .graphic-img {
+          margin: 0 auto;
+          max-width: 260px;
+          max-height: 445px;
+        }
+      }
+    }
+    .first-principles-thinking {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      flex-direction: column-reverse;
+      .graphic-ctr {
+        padding-top: 0px;
+        padding-bottom: 50px;
+      }
+      .graphic-ctr {
+        .graphic-img {
+          margin: 0 auto;
+          max-width: 260px;
+          max-height: 450px;
+        }
+      }
+    }
+    .problem-solving-ctr {
+      flex-direction: column-reverse;
+      padding: 50px 0 225px;
+      .problems-explanation {
+        padding-bottom: 0;
+        padding-top: 50px;
+      }
+      .graphic-ctr {
+        .graphic-img {
+          margin: 0 auto;
+          max-width: 260px;
+          max-height: 445px;
+        }
+      }
+    }
+    .purpose-ctr {
+      padding: 50px 0 80px;
+      .purpose-detail {
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        .thumbnail-with-bgnd {
+          position: relative;
+          top: 0;
+          transform: none;
+          margin-bottom: 60px;
+          .thumbnail-bgnd {
+            width: 180px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
+  @include for-mobile() {
+    padding: 20px;
+    .first-principles-thinking {
+      flex-direction: column-reverse;
+      .graphic-ctr {
+        padding-top: 0;
+        padding-bottom: 50px;
+      }
+    }
+    .problem-solving-ctr {
+      flex-direction: column-reverse;
+      .problems-explanation {
+        padding-bottom: 0;
+        padding-top: 50px;
+      }
+    }
+  }
+  @include for-smallscreen() {
+    text-align: left;
+    padding: 120px 60px;
+  }
+}
+
+@include for-mobile() {
+  .disable-mobile {
+    display: none;
+  }
+}
+
+@include for-tablet() {
+  .disable-mobile {
+    display: none;
+  }
+}
+
+@include for-midscreen() {
+  .disable-mobile {
+    display: none;
+  }
+}

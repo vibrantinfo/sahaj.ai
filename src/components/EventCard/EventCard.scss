@@ -1,0 +1,38 @@
+@import "styles/media-mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.event-card {
+  margin: 35px 90px 35px 35px;
+  font-family: $contentFontFamily;
+  .event-date {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .event-title {
+    color: $darkGray;
+    max-width: 220px;
+    word-break: break-word;
+  }
+  .event-organizer {
+    color: $lightPurple;
+    font-weight: 700;
+  }
+  .event-view-text {
+    color: $lightRed;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    font-weight: 700;
+    @include for-mobile() {
+      font-size: 1.1em;
+    }
+  }
+  @include for-tablet() {
+    margin-right: 50px; 
+  }
+  &:hover {
+    * {
+      color: $bgBlue;
+    }
+  }
+}

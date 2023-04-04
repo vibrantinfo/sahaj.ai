@@ -1,0 +1,133 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+
+.who-we-are-page {
+  color: white;
+  .who-we-are {
+    .desc-section {
+      display: flex;
+      padding: 105px 105px 110px 105px;
+      flex-wrap: wrap;
+      .page-title {
+        font-family: $headerFontFamily;
+        font-weight: normal;
+        margin-bottom: 50px;
+        color: $darkGray;
+      }
+      .details {
+        padding-bottom: 50px;
+        padding-right: 200px;
+        .title-text {
+          font-family: $headerFontFamily;
+          margin-bottom: 50px;
+          color: $bgBlue;
+        }
+      }
+      .explanation {
+        font-family: $contentFontFamily;
+        color: $darkGray;
+      }
+      .dictionary {
+        padding-top: 100px;
+        .hindi-name {
+          font-weight: 400;
+          margin-bottom: 50px;
+        }
+        .meaning {
+          font-size: medium;
+          font-weight: 300;
+          color: $darkGray;
+          font-family: $contentFontFamily;
+          .desc {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .tabbed-info-section {
+      padding-bottom: 50px;
+    }
+  }
+
+  @include for-mobile() {
+    .who-we-are {
+      .desc-section {
+        padding: 40px 20px 100px 20px;
+        display: block;
+        text-align: center;
+        .page-title {
+          font-family: $headerFontFamily;
+          margin-bottom: 50px;
+          font-weight: normal;
+        }
+        .details {
+          padding: 0 10px 50px 10px;
+          .title-text {
+            font-family: $headerFontFamily;
+            margin-bottom: 50px;
+          }
+        }
+        .dictionary {
+          padding-top: 0px;
+          .hindi-name {
+            font-weight: 400;
+            margin-bottom: 30px;
+          }
+          .meaning {
+            font-size: medium;
+            .desc {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //iPAD
+  @include for-tablet() {
+    .who-we-are {
+      .desc-section {
+        padding: 105px 105px 80px 105px;
+        display: block;
+        text-align: center;
+        .page-title {
+          font-family: $headerFontFamily;
+          margin-bottom: 50px;
+          font-weight: normal;
+        }
+        .details {
+          padding: 0 10px 50px 10px;
+          .title-text {
+            font-family: $headerFontFamily;
+            margin-bottom: 50px;
+          }
+        }
+        .dictionary {
+          padding-top: 0px;
+          .hindi-name {
+            font-weight: 400;
+            margin-bottom: 30px;
+          }
+          .meaning {
+            font-size: medium;
+            .desc {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include for-smallscreen() {
+    .who-we-are {
+      .desc-section {
+        padding: 105px 60px 40px 60px;
+      }
+
+    }
+  }
+}

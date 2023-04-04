@@ -1,0 +1,39 @@
+@import "styles/colors.scss";
+@import "styles/media-mixins.scss";
+@import "styles/variables.scss";
+
+.light-theme-input {
+  color: $yellow;
+  display: flex;
+  flex-direction: column;
+  font-family: $headerFontFamily;
+  .input-with-arrow {
+    border: 2px solid $yellow;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .country-code {
+      margin-right: 5px;
+      color: grey;
+    }
+    .input-box {
+      color: $yellow;
+      border: none;
+      font-weight: bold;
+      &:focus {
+        outline: none;
+      }
+    }
+    .right-arrow {
+      margin-left: auto;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .invalid-message {
+    color: $red;
+    padding: 10px 0;
+  }
+}

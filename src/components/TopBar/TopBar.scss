@@ -1,0 +1,109 @@
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  height: $topbarHeight;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  color: #434343;
+  font-family: $contentFontFamily;
+  z-index: 100;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+  box-shadow: 0px 3px 6px #00000010;
+  &.collapsed {
+    transform: translateY(-120px);
+    transition: transform 0.5s ease;
+  }
+  .topbar-brand {
+    .sahaj-icon {
+      height: 55px;
+    }
+  }
+  .topbar-items {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    justify-content: center;
+    position: relative;
+    .topbar-item {
+      font-size: clamp(16px, 1vw, 22px);
+      font-weight: bold;
+      padding-right: 40px;
+
+      &:hover {
+        cursor: pointer;
+        transform: 0.2s linear;
+        color: $turqoise;
+      }
+
+      &.who-we-are-item {
+        &.active,
+        &:hover {
+          color: $lightBlue;
+        }
+      }
+      &.what-we-do-item {
+        &.active,
+        &:hover {
+          color: $darkYellow;
+        }
+      }
+      &.what-we-think-item {
+        &.active,
+        &:hover {
+          color: $lightRed;
+        }
+      }
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+  }
+  .dot-icon-container {
+    margin-left: auto;
+    padding-left: 60px;
+    .dot-icon {
+      height: 1.6rem;
+      &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+        transition: 0.2s linear;
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    padding: 0 35px;
+    height: $topbarHeight - $topbarMobileDiff;
+    .topbar-brand {
+      .sahaj-icon {
+        height: 55px;
+      }
+    }
+    .dot-icon-container {
+      .dot-icon {
+        height: 30px;
+      }
+    }
+    .topbar-items {
+      display: none;
+    }
+  }
+  @include for-tablet() {
+    .dot-icon-container {
+      padding-left: 0;
+    }
+  }
+  @include for-smallscreen() {
+    .dot-icon-container {
+      padding-left: 0;
+    }
+  }
+}

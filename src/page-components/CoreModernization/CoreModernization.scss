@@ -1,0 +1,109 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+
+$masonryMargin: 15px;
+
+.core-modernization {
+  padding: 0 80px;
+  .client-video-ctr {
+    height: 500px;
+  }
+  .cm-masonry-listing {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    .cm-masonry-column {
+      padding: 0;
+      &:nth-of-type(1) {
+        padding-right: $masonryMargin;
+        .client-story-card {
+          &:nth-of-type(4n) {
+            background: $orange;
+          }
+          &:nth-of-type(4n + 1) {
+            background: $lightBlue;
+          }
+          &:nth-of-type(4n + 2) {
+            background: $lightRed;
+          }
+          &:nth-of-type(4n + 3) {
+            background: $red;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        .client-story-card {
+          &:nth-of-type(4n) {
+            background: $lightBlue;
+          }
+          &:nth-of-type(4n + 1) {
+            background: $red;
+          }
+          &:nth-of-type(4n + 2) {
+            background: $darkYellow;
+          }
+          &:nth-of-type(4n + 3) {
+            background: $lightNavy;
+          }
+        }
+      }
+      .thought-leadership-card {
+        margin: $masonryMargin 0;
+      }
+      .client-story-card {
+        margin: $masonryMargin 0;
+        .desc {
+          .play-icon {
+            transition: transform 0.2s ease;
+            &:hover {
+              transform: scale(0.9);
+              transition: transform 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    padding: 0;
+    .client-video-ctr {
+      height: 450px;
+    }
+    .cm-masonry-listing {
+      .cm-masonry-column {
+        &:nth-of-type(1) {
+          padding-right: 0;
+        }
+        &:nth-of-type(2) {
+          > div {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  @include for-mobile() {
+    padding: 0 20px;
+    .client-video-ctr {
+      min-height: 100px;
+      max-height: 220px;
+    }
+  }
+  @include for-tablet() {
+    .client-video-ctr {
+      height: 370px;
+    }
+  }
+  @include for-smallscreen() {
+    padding: 0;
+    .client-video-ctr {
+      height: 480px;
+    }
+  }
+  @include for-superlargescreen() {
+    .client-video-ctr {
+      height: 650px;
+    }
+  }
+}

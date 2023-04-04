@@ -1,0 +1,89 @@
+@import "styles/colors.scss";
+@import "styles/media-mixins.scss";
+
+$cardColor1: $darkYellow;
+$cardColor2: $lightBlue;
+$cardColor3: $lightPurple;
+$cardColor4: $lightRed;
+
+@mixin applyColourToCard($colorArg) {
+  .medium-blog-card {
+    .blog-details {
+      background: $colorArg;
+    }
+  }
+}
+.medium-blog-listing-ctr {
+  padding-top: 8px;
+  @include for-mobile() {
+    padding-top: 30px;
+  }
+  padding-bottom: 125px;
+  .spinner-ctr {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    .growing-loader {
+      width: 60px;
+      height: 60px;
+      margin: 0 10px;
+    }
+  }
+  .blog-listing {
+    padding-left: 0px;
+    padding-right: 0px;
+    .blog-masonry-listing {
+      display: flex;
+      flex-wrap: wrap;
+      .medium-blog-card {
+        margin: 0 7px 15px 8px;
+      }
+      .medium-blog-anchor {
+        align-self: center;
+        flex: 0 0 25%;
+        @include for-midscreen() {
+          flex: 0 0 33%;
+        }
+        @include for-screen-size-range(
+          $tablet-min-width,
+          $smallscreen-max-width
+        ) {
+          flex: 0 0 50%;
+        }
+        @include for-mobile() {
+          flex: 0 0 100%;
+        }
+        &:nth-of-type(5n + 1) {
+          @include applyColourToCard($cardColor1);
+        }
+        &:nth-of-type(5n + 2) {
+          @include applyColourToCard($cardColor2);
+        }
+        &:nth-of-type(5n + 3) {
+          @include applyColourToCard($cardColor3);
+        }
+        &:nth-of-type(5n + 4) {
+          @include applyColourToCard($cardColor4);
+        }
+        &:nth-of-type(5n) {
+          @include applyColourToCard($cardColor4);
+        }
+        &:nth-of-type(9n) {
+          @include applyColourToCard($cardColor2);
+        }
+        .story-card {
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-bottom: 15px;
+          @include for-mobile() {
+            padding-top: 35px;
+            padding-bottom: 35px;
+          }
+          &:hover {
+            color: $cardColor2;
+          }
+        }
+      }
+    }
+  }
+}

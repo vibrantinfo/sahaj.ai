@@ -1,0 +1,126 @@
+@import "styles/colors.scss";
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.contact-us {
+  display: flex;
+  flex-wrap: wrap;
+  color: $darkGray;
+  padding: 100px 120px 225px 120px;
+  font-family: $contentFontFamily;
+  font-weight: lighter;
+
+  .header {
+    font-family: $headerFontFamily;
+    font-weight: normal;
+  }
+
+  .playfairFont {
+    font-family: $headerFontFamily;
+    font-weight: 600;
+    color: $bgBlue;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .enquiries-container {
+    .enquiries {
+      margin-top: 50px;
+
+      .job-seekers-div {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .offices-container {
+    .office-listing {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .office-details {
+      margin-top: 50px;
+      width: calc(50% - 80px);
+      &:nth-child(odd) {
+        margin-right: 100px;
+      }
+      .office-location {
+        font-weight: 500;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .office-address {
+        font-size: 15px;
+      }
+      .office-phone-list {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    padding: 60px 20px 225px 20px;
+    .offices-container {
+      margin-top: 70px;
+      .office-details {
+        width: 100%;
+        &:nth-child(odd) {
+          margin-right: 0px;
+        }
+        .office-location {
+          font-size: 26px;
+        }
+        .office-address {
+          font-size: unset;
+        }
+      }
+    }
+  }
+
+  @include for-tablet() {
+    padding: 60px 20px 225px 20px;
+    .offices-container {
+      margin-top: 70px;
+      .office-details {
+        width: 100%;
+        &:nth-child(odd) {
+          margin-right: 0px;
+        }
+        .office-location {
+          font-size: 26px;
+        }
+        .office-address {
+          font-size: unset;
+        }
+      }
+    }
+  }
+  
+  @include for-smallscreen() {
+    padding: 100px 60px 225px 60px;
+    .offices-container {
+      .office-details {
+        width: 100%;
+        &:nth-child(odd) {
+          margin-right: 0px;
+        }
+        .office-location {
+          font-size: 26px;
+        }
+        .office-address {
+          font-size: unset;
+        }
+      }
+    }
+  }
+}

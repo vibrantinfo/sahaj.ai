@@ -1,0 +1,23 @@
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.back-button {
+  color: white;
+  border: 2px solid;
+  border: none;
+  padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(24px, 1.6vw, 28px);
+  border-radius: 40px;
+  background-color: $lightRed;
+  justify-content: center;
+
+  .left-icon {
+    margin-right: 10px;
+  }
+
+  .text {
+    font-family: $contentFontFamily;
+  }
+}

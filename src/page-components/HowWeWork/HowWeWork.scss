@@ -1,0 +1,454 @@
+@import "styles/mixins.scss";
+@import "styles/media-mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.how-we-work {
+  .solution-design {
+    padding: 0;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+
+    .design-desc {
+      margin-left: -8vw;
+      max-height: 270px;
+      padding: 0;
+
+      .principles-container {
+        color: white;
+        background-color: $bgBlue;
+        padding: 65px 50px 65px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: flex-end;
+        .text-container {
+          .title-text {
+            font-family: $headerFontFamily;
+          }
+          .sub-text {
+            font-weight: bold;
+            font-family: $contentFontFamily;
+          }
+        }
+      }
+    }
+
+    .principles-cards-ctr {
+      color: white;
+      height: 100%;
+      .principles-grid {
+        display: flex;
+
+        .card-container {
+          padding: 0px;
+          min-height: 100%;
+          position: relative;
+
+          .principles-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            padding: 35px;
+            .from-detail {
+              margin-top: 20px;
+              font-weight: 400;
+              @include textSizing(3);
+              font-family: $contentFontFamily;
+            }
+            .to-detail {
+              margin-bottom: 20px;
+              font-weight: 400;
+              @include textSizing(2.9);
+              font-family: $contentFontFamily;
+            }
+            .top-detail {
+              font-weight: bold;
+              margin-top: 20px;
+              @include descriptionFontSize();
+              @include textSizing(2);
+              font-family: $contentFontFamily;
+            }
+            .bottom-detail {
+              font-weight: 400;
+              margin-top: 10px;
+              margin-bottom: 15px;
+              @include textSizing(3);
+              font-family: $contentFontFamily;
+            }
+            .message-detail {
+              font-weight: bold;
+              padding: 0 25px;
+              @include descriptionFontSize();
+              font-family: $contentFontFamily;
+            }
+          }
+          .graphic-img {
+            svg {
+              width: 323px;
+              height: auto;
+            }
+          }
+          .second-graphic {
+            position: absolute;
+            top: -12%;
+            right: 8%;
+            svg {
+              width: 80px;
+              
+            }
+          }
+          .third-graphic {
+            svg {
+              width: 136px;
+            }
+          }
+          .fourth-graphic {
+            svg {
+              width: 100%;
+            }
+          }
+          @include for-midscreen() {
+            .principles-card {
+              .top-detail {
+                margin-top: 0px;
+                font-size: 1.2rem;
+              }
+              .bottom-detail {
+                font-size: 0.9rem;
+              }
+            }
+            .third-graphic {
+              svg {
+                width: 116px;
+              }
+            }
+          }
+        }
+        .one {
+          background-color: $darkYellow;
+        }
+        .two {
+          background-color: $lightPurple;
+        }
+        .three {
+          background-color: $lightBlue;
+        }
+        .four {
+          background-color: $lightRed;
+        }
+      }
+      .third-row {
+        justify-content: left;
+      }
+      .second-row {
+        .card-container:first-of-type {
+          margin-left: -18.64vw;
+        }
+      }
+    }
+  }
+
+  .middle-section {
+    margin: 0 0 17px 0;
+
+    .middle-section-content {
+      margin-right: 17px;
+      background: white;
+      padding: 50px;
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  @include for-mobile() {
+    padding: 20px 20px 225px 20px;
+    .details {
+      padding: 80px 20px;
+    }
+    .solution-design {
+      display: block;
+      height: unset;
+      .design-desc {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0px;
+        .principles-container {
+          background-color: $bgBlue;
+          height: unset;
+          padding: 40px 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .text-container {
+            .title-text {
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      .principles-cards-ctr {
+        color: white;
+
+        .first-row {
+          padding-bottom: unset;
+        }
+
+        .second-row {
+          padding-top: unset;
+        }
+        .second-row {
+          .card-container:first-of-type {
+            margin-left: 0;
+          }
+        }
+
+        .principles-grid {
+          margin-bottom: unset;
+
+          .card-container {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-top: 17px;
+            .principles-card {
+              justify-content: left;
+              align-content: flex-start;
+              .from-detail {
+                margin-top: 0;
+                font-weight: 400;
+              }
+              .to-detail {
+                margin-top: 20px;
+                font-weight: 400;
+              }
+              .top-detail {
+                margin-top: 0;
+              }
+              .bottom-detail {
+                font-weight: 400;
+              }
+              .message-detail {
+                padding: 0;
+                font-size: 21px;
+              }
+            }
+          }
+        }
+        .third-row {
+          margin-top: 25px;
+          .card-container {
+            .second-graphic {
+              position: absolute;
+              top: -10%;
+              right: 8%;
+              svg {
+                width: 80px;
+    
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //iPAD Portrait
+  @include for-tablet() {
+    padding: 20px 20px 225px 20px;
+    .details {
+      padding: 80px 20px;
+    }
+    .solution-design {
+      display: block;
+      height: unset;
+      .design-desc {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0px;
+        .principles-container {
+          height: unset;
+          padding: 50px 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          .text-container {
+            .title-text {
+              font-family: $headerFontFamily;
+              padding-bottom: 20px;
+            }
+            .sub-text {
+              font-family: $contentFontFamily;
+            }
+          }
+        }
+      }
+
+      .principles-cards-ctr {
+        color: white;
+
+        .first-row {
+          padding-bottom: unset;
+        }
+
+        .second-row {
+          padding-top: unset;
+        }
+        .second-row {
+          .card-container:first-of-type {
+            margin-left: 0;
+          }
+        }
+
+        .third-row {
+          margin-top: 30px;
+          .card-container {
+            .second-graphic {
+              position: absolute;
+              top: -16%;
+              right: 8%;
+              svg {
+                width: 80px;
+    
+              }
+            }
+          }
+        }
+
+        .principles-grid {
+          margin-bottom: unset;
+
+          .card-container {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-top: 17px;
+            .principles-card {
+              justify-content: left;
+              align-content: flex-start;
+              .from-detail {
+                margin-top: 0;
+                font-weight: 400;
+                @include textSizing(2);
+              }
+              .to-detail {
+                font-weight: 400;
+                @include textSizing(2);
+              }
+              .top-detail {
+                margin-top: 0;
+                @include textSizing(1);
+              }
+              .bottom-detail {
+                font-weight: 400;
+                @include textSizing(2);
+              }
+              .message-detail {
+                padding: 0;
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // //IPAD landscape
+  // @include for-smallscreen() {
+  //   padding: 0 0 225px 0;
+  //   font-size: 0.9rem;
+    
+  //   .solution-design {
+  //     .design-desc {
+  //       .principles-container {
+  //         padding: 50px;
+  //       }
+  //     }
+  //   }
+  // }
+
+  @include for-smallscreen() {
+    .solution-design {
+
+      .principles-cards-ctr {
+        .principles-grid {
+          .card-container {
+
+            .principles-card {
+              .top-detail {
+                @include contentFontSize();
+                margin-bottom: 20px;
+              }
+              .bottom-detail {
+                @include textSizing(5.8);
+                font-size: 0.8rem;
+              }
+              .from-detail {
+                margin-top: 36px;
+                margin-bottom: 10px;
+                font-size: 0.8rem;
+              }
+              .to-detail {
+                margin-bottom: 26px;
+                font-size: 0.8rem;
+              }
+            }
+
+            .no-bottom {
+              padding: 35px 30px 0px 30px !important;
+            }
+
+            .first-graphic {
+              svg {
+                width: 323px;
+                height: auto;
+              }
+            }
+            .second-graphic {
+              position: absolute;
+              top: -8%;
+              right: 8%;
+              svg {
+                width: 80px;
+  
+              }
+            }
+            .third-graphic {
+              svg {
+                width: 139px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.disable-large {
+  display: none;
+}
+
+@include for-tablet() {
+  .disable-mobile-how {
+    display: none;
+  }
+  .disable-large {
+    display: block;
+  }
+}
+
+@include for-mobile() {
+  .disable-mobile-how {
+    display: none;
+  }
+  .disable-large {
+    display: block;
+  }
+}

@@ -1,0 +1,11 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+
+.map {
+  width: 100%;
+  @include for-mobile-and-tablet() {
+    .map-iframe {
+      height: 400px;
+    }
+  }
+}

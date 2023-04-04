@@ -1,0 +1,119 @@
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.what-we-do-page {
+  .what-we-do {
+    color: white;
+
+    .detail-ctr {
+      padding: 105px 105px 80px 105px;
+      display: flex;
+      flex-wrap: wrap;
+      .small-title {
+        font-family: $headerFontFamily;
+        font-size: 18px;
+        font-weight: normal;
+        padding-bottom: 50px;
+        color: $darkGray;
+      }
+      .detail {
+        padding-bottom: 20px;
+        padding-left: 50px;
+        .header-text {
+          font-family: $headerFontFamily;
+          padding-bottom: 50px;
+          color: $bgBlue;
+        }
+        .explanation {
+          @include contentFontSize();
+          font-family: $contentFontFamily;
+          color: $darkGray;
+        }
+      }
+      .graphic-col {
+        .graphic-img {
+          margin: 0 10% 0 20%;
+          max-width: 342px;
+          max-height: 445px;
+        }
+      }
+    }
+    .tabbed-info-section {
+      padding-bottom: 240px;
+    }
+    .message-detail {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 120px 105px;
+      .left-side {
+        .header-text {
+          font-family: $headerFontFamily;
+          padding-bottom: 50px;
+          // color: $bgBlue;
+        }
+      }
+      .right-side {
+        .header-with-text {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    .what-we-do {
+      .detail-ctr {
+        text-align: center;
+        .detail {
+          padding-bottom: 80px;
+          padding-left: 15px;
+          .header-text {
+            padding-bottom: 0;
+          }
+          .explanation {
+            padding-top: 1rem;
+          }
+        }
+        .graphic-col {
+          padding-bottom: 50px;
+          .graphic-img {
+            margin: 0 auto;
+            max-width: 260px;
+          }
+        }
+      }
+      .message-detail {
+        padding: 20px 20px;
+        .left-side {
+          padding-bottom: 50px;
+        }
+      }
+      .tabbed-info-section {
+        padding-bottom: 225px;
+      }
+    }
+  }
+  @include for-mobile() {
+    .what-we-do {
+      .detail-ctr {
+        text-align: center;
+        padding: 50px 20px 20px 20px;
+      }
+    }
+  }
+  @include for-tablet() {
+    .what-we-do {
+      .detail-ctr {
+        text-align: center;
+      }
+    }
+  }
+  @include for-smallscreen() {
+    .what-we-do {
+      .detail-ctr {
+        padding: 105px 45px 40px 45px;
+      }
+    }
+  }
+}

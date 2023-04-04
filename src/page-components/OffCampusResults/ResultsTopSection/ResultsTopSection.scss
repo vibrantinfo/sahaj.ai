@@ -1,0 +1,17 @@
+@import "styles/media-mixins.scss";
+@import "styles/utils.scss";
+
+.results-top-section {
+  font-family: "Raleway";
+  color: #151b3b;
+  .spinner-ctr {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    .growing-loader {
+      width: 60px;
+      height: 60px;
+      margin: 0 10px;
+    }
+  }
+}

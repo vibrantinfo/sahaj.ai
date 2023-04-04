@@ -1,0 +1,45 @@
+@import "styles/media-mixins.scss";
+
+@mixin contentFontSize() {
+  font-size: clamp(18px, 1.3vw, 18px);
+}
+
+@mixin formFontSize() {
+  font-size: clamp(15px, 1.1vw, 16px);
+}
+
+@mixin descriptionFontSize(){
+  font-size: 25px;
+}
+
+@mixin miniFontSize() {
+  font-size: 14px;
+}
+
+@mixin emailFontSize() {
+  font-size: 32px;
+}
+
+@mixin textTruncate($num-lines: 4, $line-height: 1.5em) {
+  display: -webkit-box;
+  -webkit-line-clamp: $num-lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: $line-height;
+  height: calc(#{$num-lines} * #{$line-height});
+  @include for-mobile() {
+    display: block;
+    height: unset;  
+  }
+}
+
+@mixin textSizing($num-lines: 4, $line-height: 1.5em) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: $line-height;
+  height: calc(#{$num-lines} * #{$line-height});
+  @include for-mobile() {
+    display: block;
+    height: unset;  
+  }
+}

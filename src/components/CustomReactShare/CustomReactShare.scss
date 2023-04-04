@@ -1,0 +1,31 @@
+.social-share {
+  color: white;
+  button {
+    margin-right: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  svg {
+    &:hover {
+      &.linked-in {
+        color: #0077b5 !important;
+      }
+      &.facebook {
+        color: #3b5998 !important;
+      }
+      &.youtube {
+        color: #ff0000 !important;
+      }
+      &.medium {
+        color: #00ab6c !important;
+      }
+      &.twitter {
+        color: #1da1f2 !important;
+      }
+      &.github {
+        color: #6e5494 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.story-card {
+  padding: 35px;
+  // color: white;
+  font-family: $headerFontFamily;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-out;
+  .title {
+    @include textTruncate(4);
+    font-weight: 600;
+    @include descriptionFontSize();
+    .title-large {
+      @include textTruncate(3, 1.1em);
+      margin-bottom: 30px;
+      @include for-mobile() {
+        margin-bottom: 10px;
+      }
+      font-weight: 500;
+    }
+  }
+  .read-more-text {
+    font-family: $contentFontFamily;
+    @include for-mobile() {
+      padding-top: 1em;
+    }
+  }
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+.light-weight {
+  .title-large {
+    font-weight: 600;
+  }
+}
+.is-founding {
+  font-family: $contentFontFamily;
+}

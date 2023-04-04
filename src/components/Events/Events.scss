@@ -1,0 +1,66 @@
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+@import "styles/media-mixins.scss";
+
+.events-front-page {
+  display: block;
+  color: $darkGray;
+  padding: 105px 120px 275px 120px;
+  text-align: center;
+  .caption {
+    font-family: $headerFontFamily;
+    font-weight: normal;
+  }
+  .header-text {
+    color: $bgBlue;
+    font-family: $headerFontFamily;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  .description {
+    @include contentFontSize();
+    font-weight: 300;
+    font-family: $contentFontFamily;
+    padding-top: 70px;
+  }
+  .upcoming-events-ctr {
+    .events-title {
+      font-family: $headerFontFamily;
+      color: $bgBlue;
+      font-weight: 600;
+    }
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .link-ctr {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    button {
+      border: none;
+      font-family: $contentFontFamily;
+    }
+  }
+
+  @include for-mobile() {
+    padding: 60px 35px 275px;
+
+    .header-text {
+      margin-top: 20px;
+    }
+
+    .upcoming-events-ctr {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include for-smallscreen() {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}

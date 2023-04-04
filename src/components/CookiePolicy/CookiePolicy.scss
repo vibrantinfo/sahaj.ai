@@ -1,0 +1,44 @@
+@import "styles/colors.scss";
+@import "styles/media-mixins.scss";
+
+.cookie-policy-ctr {
+  color: white;
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 200;
+  .cookie-policy {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    margin: 20px auto;
+    background: $lightPurple;
+    border-radius: 50px;
+    max-width: 95%;
+    .button-ctr {
+      margin-left: 50px;
+      &:hover {
+        cursor: pointer;
+      }
+      .accept-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100px;
+        border: none;
+      }
+    }
+  }
+
+  @include for-mobile-and-tablet() {
+    .cookie-policy {
+      border-radius: 25px;
+      flex-direction: column;
+      .button-ctr {
+        margin: 20px auto 0 auto;
+      }
+    }
+  }
+}

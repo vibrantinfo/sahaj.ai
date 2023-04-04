@@ -1,0 +1,122 @@
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+
+.footer {
+  color: white;
+  background: $bgBlue;
+  font-family: $contentFontFamily;
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  .footer-header {
+    img {
+      height: auto;
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 120px 50px 120px;
+    .about-sahaj {
+      padding-right: 20px;
+      .para-1 {
+        padding-bottom: 10px;
+      }
+    }
+
+    .social-links {
+      margin-bottom: 20px;
+      justify-content: left;
+
+      .social-icon-link:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .right-side {
+      padding-right: 0;
+      padding-left: 20px
+    }
+    .terms-and-conditions {
+      font-weight: bold;
+    }
+    .csr-policy {
+      margin-top: 10px;
+      font-weight: 400;
+
+      .csr-link {
+        @include for-mobile() {
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+  }
+  .copyright-text {
+    margin-top: 10px;
+    font-weight: 300;
+  }
+  @include for-mobile-and-tablet() {
+    height: auto;
+    top: $topbarHeight - $topbarMobileDiff;
+    .footer-header {
+      img {
+        transform: scaleY(3.5);
+        vertical-align: text-top;
+      }
+    }
+    .footer-content {
+      padding: 20px 35px 28px;
+      .about-sahaj {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .about-para {
+          padding-bottom: 10px;
+        }
+        .para-1 {
+          line-height: 1.5;
+        }
+      }
+
+      .right-side {
+        padding: 10px 0 0 0;
+        .social-links {
+          justify-content: flex-start;
+          .social-icon-link {
+            margin-left: 0;
+            margin-right: 15px;
+          }
+        }
+      }
+      .copyright-text {
+        text-align: left;
+      }
+    }
+  }
+  
+  &.light-themed {
+    color: $bgBlue;
+    .footer-content {
+      padding: 0 60px;
+      .about-sahaj {
+        .about-para {
+          .turqoise {
+            font-weight: bold;
+            color: $bgBlue;
+          }
+        }
+      }
+    }
+  }
+}

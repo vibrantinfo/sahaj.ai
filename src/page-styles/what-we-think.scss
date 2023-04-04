@@ -1,0 +1,46 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+
+.what-we-think-page {
+  color: $darkGray;
+  .what-we-think {
+    .top-section {
+      padding: 105px;
+      text-align: center;
+      .page-title {
+        font-family: $headerFontFamily;
+        font-weight: normal;
+        padding-bottom: 50px;
+      }
+      .header-text {
+        font-family: $headerFontFamily;
+        color: $bgBlue;
+        padding-bottom: 50px;
+      }
+      .description {
+        font-family: $contentFontFamily;
+      }
+    }
+    .tabbed-info-section {
+      padding-bottom: 135px;
+    }
+    @include for-mobile() {
+      .top-section {
+        padding: 40px 35px 100px 35px;
+      }
+    }
+    @include for-tablet() {
+      .top-section {
+        padding-bottom: 80px;
+      }
+    }
+    @include for-smallscreen() {
+      .top-section {
+        padding-left: 75px;
+        padding-right: 75px;
+      }
+    }
+  }
+}

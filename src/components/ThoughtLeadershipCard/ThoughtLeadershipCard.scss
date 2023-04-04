@@ -1,0 +1,53 @@
+@import "styles/mixins.scss";
+@import "styles/media-mixins.scss";
+@import "styles/colors.scss";
+@import "styles/variables.scss";
+
+.thought-leadership-card {
+  background: $bgBlue;
+  color: white;
+  padding: 50px;
+  margin: 10px 0;
+  &:hover {
+    color: $darkYellow;
+    transform: scale(0.98);
+    transition: transform 0.2s ease;
+  }
+  .small-title-text {
+    font-size: 16px;
+    font-family: $headerFontFamily;
+    padding-bottom: 25px;
+  }
+  .medium-blog-title {
+    padding-bottom: 45px;
+    font-family: $headerFontFamily;
+    font-weight: 600;
+  }
+  .bottom-section {
+    display: flex;
+    @include contentFontSize();
+    align-items: center;
+    .icon-with-link {
+      display: flex;
+      align-items: center;
+
+      .medium-icon {
+        margin-right: 10px;
+      }
+
+      .medium-link {
+        font-weight: 600;
+        font-family: $contentFontFamily;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    padding: 40px;
+    .medium-blog-title {
+      padding-bottom: 15px;
+    }
+  }
+}

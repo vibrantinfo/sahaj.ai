@@ -1,0 +1,132 @@
+@import "styles/variables.scss";
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+
+.home-page {
+  color: #434343;
+  padding: 120px 0 0 0;
+
+  .top-section {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    padding: 70px 150px 0 0;
+    .graphic-watermark {
+      position: absolute;
+      top: -210px;
+      left: -330px;
+      height: 175%;
+    }
+    @include for-1kscreen() {
+      .graphic-watermark {
+        top: -200px;
+        left: -240px;
+        height: 190%;
+      }
+    }
+    .left-section {
+      padding-left: 110px;
+      padding-top: 20px;
+      .graphic-img {
+        margin: 0 auto;
+        height: auto;
+        max-width: 425px;
+      }
+    }
+    .right-section {
+      padding-left: 110px;
+      .artisanal-section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .artisanal-text {
+          font-family: $headerFontFamily;
+          color: #33357D;
+        }
+        .para {
+          font-family: $contentFontFamily;
+          @include contentFontSize();
+          margin: 1em 0;
+          pointer-events: auto;
+        }
+      }
+      .dictionary {
+        font-family: $contentFontFamily;
+        margin-top: 15px;
+        @include miniFontSize();
+        .type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    text-align: center;
+    .top-section {
+      padding: 0 20px;
+      .left-section {
+        padding-bottom: 50px;
+        .graphic-img {
+          padding: 20px 15px 50px 15px;
+        }
+      }
+      .dictionary {
+        padding-right: 0;
+        max-width: auto;
+      }
+    }
+  }
+  @include for-mobile() {
+    padding: 20px 0 80px 0;
+    .top-section {
+      padding: 0 20px;
+      .left-section {
+        padding: 0px 0px 50px 0px;
+        .graphic-img {
+          width: 100%;
+        }
+      }
+      .right-section {
+        padding: 0 35px;
+      }
+      .dictionary {
+        padding-right: 0;
+        max-width: auto;
+      }
+    }
+  }
+  @include for-tablet() {
+    .top-section {
+      .right-section {
+        padding: 0 120px;
+      }
+    }
+  }
+  @include for-smallscreen() {
+    .top-section {
+      padding: 0 60px 0 0;
+      .right-section {
+        padding: 0 0 0 50px;
+      }
+    }
+  }
+}
+
+@include for-mobile() {
+  .disable-mobile {
+    display: none;
+  }
+}
+
+@include for-tablet() {
+  .disable-mobile {
+    display: none;
+  }
+}
+
+@include for-midscreen() {
+  .disable-mobile {
+    display: none;
+  }
+}

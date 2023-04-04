@@ -1,0 +1,33 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.medium-blog-card {
+  transition: transform 0.2s ease-out;
+  .blog-details {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    .blog-title {
+      @include descriptionFontSize();
+      @include textTruncate();
+      font-weight: 600;
+      font-family: $contentFontFamily;
+      margin-bottom: 20px;
+    }
+    .blog-icon-with-caption {
+      display: flex;
+      align-items: flex-end;
+      .caption {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+      .medium-icon {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+  &:hover {
+    transform: scale(0.98);
+  }
+}

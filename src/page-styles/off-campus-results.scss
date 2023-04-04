@@ -1,0 +1,26 @@
+@import "styles/media-mixins.scss";
+@import "styles/colors.scss";
+
+.off-campus-results {
+  .top-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    .logo-container {
+      width: 164px;
+      height: 80px;
+    }
+  }
+  hr {
+    border-color: #0f82b2;
+    margin: 0 120px;
+  }
+  .footer {
+    top: 0;
+  }
+  @include for-mobile-and-tablet() {
+    hr {
+      margin: 0 35px;
+    }
+  }
+}

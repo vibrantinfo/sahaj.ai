@@ -1,0 +1,57 @@
+@import "styles/media-mixins.scss";
+
+.tab-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  &.left-tabs {
+    flex-direction: row-reverse;
+    .tabs {
+      .sticky-content {
+        padding: 50px 0 50px 105px;
+      }
+    }
+  }
+  .active-content {
+    color: black;
+    background: white;
+    padding: 0;
+    pointer-events: all;
+  }
+  .tabs {
+    .sticky-content {
+      position: sticky;
+      top: 0;
+      padding: 50px 0 50px 50px;
+      .title-text {
+        margin-bottom: 25px;
+      }
+      .tab-item {
+        margin-bottom: 50px;
+        opacity: 0.5;
+
+        &.active {
+          opacity: 1;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @include for-mobile-and-tablet() {
+    flex-direction: column-reverse;
+    &.left-tabs {
+      flex-direction: column-reverse;
+      .tabs {
+        .sticky-content {
+          padding: 20px 0 20px 20px;
+        }
+      }
+    }
+    .tabs {
+      .sticky-content {
+        padding: 20px 0 20px 20px;
+      }
+    }
+  }
+}

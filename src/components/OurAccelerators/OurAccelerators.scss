@@ -1,0 +1,37 @@
+@import "styles/colors.scss";
+@import "styles/media-mixins.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.accelerators-ctr {
+  padding-top: 10px;
+  padding-bottom: 140px;
+  .accelerator {
+    font-family: $contentFontFamily;
+    color: white;
+    padding: 50px;
+    display: block;
+    p {
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    a {
+      font-weight: 700;
+    }
+  }
+
+  .link {
+    font-family: $contentFontFamily;
+    font-weight: 300;
+  }
+
+  .clamp {
+    background: $lightBlue;
+  }
+
+  @include for-mobile-and-tablet() {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 225px;
+  }
+}
