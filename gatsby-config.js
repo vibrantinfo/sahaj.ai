@@ -1,7 +1,11 @@
 const offices = require("./static_data/offices");
 const path = require("path");
+
+console.log(process.env.NODE_ENV);
+
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
+  // path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {

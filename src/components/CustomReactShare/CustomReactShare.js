@@ -6,7 +6,7 @@ import LinkedInIconG from "images/icons/social/linkedin.svg";
 import TwitterIconG from "images/icons/social/twitter.svg";
 import { ShareButton, ShareBlock } from "react-custom-share";
 import { IconContext } from "react-icons";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import "./CustomReactShare.scss";
 
 const CustomReactShare = props => {
